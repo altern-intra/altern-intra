@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "front"
+    "name": "ngx-admin-demo"
   },
   "apps": [
     {
@@ -9,7 +9,13 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "favicon.ico"
+        "favicon.ico",
+        "favicon.png",
+        {
+          "glob": "**/*",
+          "input": "../node_modules/leaflet/dist/images",
+          "output": "./assets/img/markers"
+        }
       ],
       "index": "index.html",
       "main": "main.ts",
@@ -17,11 +23,26 @@
       "test": "test.ts",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
-      "prefix": "app",
       "styles": [
-        "styles.css"
+        "../node_modules/bootstrap/dist/css/bootstrap.css",
+        "../node_modules/typeface-exo/index.css",
+        "../node_modules/roboto-fontface/css/roboto/roboto-fontface.css",
+        "../node_modules/ionicons/scss/ionicons.scss",
+        "../node_modules/font-awesome/scss/font-awesome.scss",
+        "../node_modules/nebular-icons/scss/nebular-icons.scss",
+        "../node_modules/socicon/css/socicon.css",
+        "./app/@theme/styles/styles.scss"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/tinymce/tinymce.min.js",
+        "../node_modules/tinymce/themes/modern/theme.min.js",
+        "../node_modules/tinymce/plugins/link/plugin.min.js",
+        "../node_modules/tinymce/plugins/paste/plugin.min.js",
+        "../node_modules/tinymce/plugins/table/plugin.min.js",
+        "./assets/vendors/echarts.min.js",
+        "./assets/vendors/echarts.world.min.js",
+        "../node_modules/chart.js/dist/Chart.min.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
@@ -36,16 +57,14 @@
   },
   "lint": [
     {
-      "project": "src/tsconfig.app.json",
-      "exclude": "**/node_modules/**"
+      "files": "src/**/*.ts",
+      "project": "src/tsconfig.app.json"
     },
     {
-      "project": "src/tsconfig.spec.json",
-      "exclude": "**/node_modules/**"
+      "project": "src/tsconfig.spec.json"
     },
     {
-      "project": "e2e/tsconfig.e2e.json",
-      "exclude": "**/node_modules/**"
+      "project": "e2e/tsconfig.e2e.json"
     }
   ],
   "test": {
@@ -54,7 +73,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }

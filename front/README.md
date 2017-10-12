@@ -1,27 +1,58 @@
-# Front
+# Admin template based on Angular 4+, Bootstrap 4 and <a href="https://github.com/akveo/nebular">Nebular</a>
+<a target="_blank" href="http://akveo.com/ngx-admin/"><img src="https://i.imgur.com/7BxWBBq.png"/></a>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.3.
+### What's included:
 
-## Development server
+- Angular 4+ & Typescript
+- Bootstrap 4+ & SCSS
+- Responsive layout
+- High resolution
+- Flexibly configurable themes with **hot-reload** (2 themes included)
+- Authentication module with multiple providers
+- Lots of awesome features:
+  - Buttons
+  - Modals
+  - Icons
+  - Typography
+  - Animated searches
+  - Forms
+  - Tabs
+  - Notifications
+  - Tables
+  - Maps
+  - Charts
+  - Editors
+  
+And many more!
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Demo
 
-## Code scaffolding
+<a target="_blank" href="http://akveo.com/ngx-admin/">Live Demo</a>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### ng2-admin
+We will continue supporting ng2-admin version, but if you are starting from scratch we recommend using ngx-admin version. Unfortunately, there is no way to update from ng2-admin to ngx-admin, but some parts (Nebular components) could be manually included.
 
-## Build
+### Angular 1.x version
+Here you can find Angular 1.x based version: [Blur Admin](http://akveo.github.io/blur-admin/)
+ 
+## Documentation
+This template is using [Nebular](https://github.com/akveo/nebular) modules set, documentation and other useful articles could be found [here](https://akveo.github.io/nebular/#/docs/installation/based-on-starter-kit).
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
 
-## Running unit tests
+## BrowserStack
+This project runs its tests on multiple desktop and mobile browsers using [BrowserStack](http://www.browserstack.com).
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+<img src="https://cloud.githubusercontent.com/assets/131406/22254249/534d889e-e254-11e6-8427-a759fb23b7bd.png" height="40" />
 
-## Running end-to-end tests
+### How can I support developers?
+- Star our GitHub repo :star:
+- Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
+- Follow us on [Twitter](https://twitter.com/akveo_inc) :feet:
+- Like our page on [Facebook](https://www.facebook.com/akveo/) :thumbsup:
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### Looking for engineering services? 
+Visit [our homepage](http://akveo.com/) or simply leave us a message to [contact@akveo.com](mailto:contact@akveo.com). We will be happy to work with you!
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### From Akveo
+Made with :heart: by [Akveo team](http://akveo.com/). Follow us on [Twitter](https://twitter.com/akveo_inc) to get the latest news first!
+We're always happy to receive your feedback!
