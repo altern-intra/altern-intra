@@ -1,58 +1,37 @@
-# Admin template based on Angular 4+, Bootstrap 4 and <a href="https://github.com/akveo/nebular">Nebular</a>
-<a target="_blank" href="http://akveo.com/ngx-admin/"><img src="https://i.imgur.com/7BxWBBq.png"/></a>
+Altern-intra
+============
 
-### What's included:
+L'idée est née de Quentin Maire et Benjamin Audet, nous en avions marre d'avoir un intra instable et qui nous offrait une mauvaise expérience utilisateur. 
 
-- Angular 4+ & Typescript
-- Bootstrap 4+ & SCSS
-- Responsive layout
-- High resolution
-- Flexibly configurable themes with **hot-reload** (2 themes included)
-- Authentication module with multiple providers
-- Lots of awesome features:
-  - Buttons
-  - Modals
-  - Icons
-  - Typography
-  - Animated searches
-  - Forms
-  - Tabs
-  - Notifications
-  - Tables
-  - Maps
-  - Charts
-  - Editors
-  
-And many more!
+Nous avons donc décidé de "refaire" l'intra, ce n'est pas réellement une refonte, mais une alternative, une sur-couche à l'intra existant qui vise à avoir quelques secondes, voir minutes de downtime. Au delà de l'amélioration via enregistrement de contenu par refresh régulier des données, il fallait une application design, dans l'air du temps et surtout efficace.
 
-### Demo
+## Technologies ##
 
-<a target="_blank" href="http://akveo.com/ngx-admin/">Live Demo</a>
+Nous utilisons le framework Angular 2 ou 4 (comme vous voulez). 
 
-### ng2-admin
-We will continue supporting ng2-admin version, but if you are starting from scratch we recommend using ngx-admin version. Unfortunately, there is no way to update from ng2-admin to ngx-admin, but some parts (Nebular components) could be manually included.
+Nous avons décidé de partir d'un template admin nommé [ngx-admin](https://github.com/akveo/ngx-admin) qui faciliterait l'implémentation d'une interface de gestion tout en gardant un design propre et épuré.
 
-### Angular 1.x version
-Here you can find Angular 1.x based version: [Blur Admin](http://akveo.github.io/blur-admin/)
- 
-## Documentation
-This template is using [Nebular](https://github.com/akveo/nebular) modules set, documentation and other useful articles could be found [here](https://akveo.github.io/nebular/#/docs/installation/based-on-starter-kit).
+Bien évidemment, nous utilisons [Bootstrap](http://getbootstrap.com) (en version 4.0.0-alpha.6) qui est un framework HTML/CSS/JS qui permet notamment de faire des sites responsives, et qui d'ailleurs va totalement de paire avec Angular 2.
 
+## Bonnes pratiques ##
 
-## BrowserStack
-This project runs its tests on multiple desktop and mobile browsers using [BrowserStack](http://www.browserstack.com).
+Comme vous l'aurez compris, ce projet est collaborative, sous license open-source, à vocation d'être développé par des étudiants pour des étudiants.
 
-<img src="https://cloud.githubusercontent.com/assets/131406/22254249/534d889e-e254-11e6-8427-a759fb23b7bd.png" height="40" />
+Néanmoins, collaboratif n'est pas anarchiste : 
 
-### How can I support developers?
-- Star our GitHub repo :star:
-- Create pull requests, submit bugs, suggest new features or documentation updates :wrench:
-- Follow us on [Twitter](https://twitter.com/akveo_inc) :feet:
-- Like our page on [Facebook](https://www.facebook.com/akveo/) :thumbsup:
+ - Quentin et moi même (peut être d'autres plus tard) ont le lead du projet afin de mener à bien le projet et de garder une cohérence global.
 
-### Looking for engineering services? 
-Visit [our homepage](http://akveo.com/) or simply leave us a message to [contact@akveo.com](mailto:contact@akveo.com). We will be happy to work with you!
+ - Nous fonctionnons à la pull request ! Travailler de votre côté et proposer votre évolution. Vous pourrez aller voir du côté des [issues](https://github.com/Wats0ns/intra_native/issues) du repo afin de voir ce qu'il y a faire, en priorité ou non et classé selon la complexité des tâches.
+ - On essaye de suivre un maximum les normes de code :
+   -  Indentation propre (est-ce nécéssaire de le dire ?)
+   - Utilisation de git avec commit un maximum atomique
+   - ECMAScript 2015
+   - etc...
 
-### From Akveo
-Made with :heart: by [Akveo team](http://akveo.com/). Follow us on [Twitter](https://twitter.com/akveo_inc) to get the latest news first!
-We're always happy to receive your feedback!
+Si vous avez envie de participer, mais que vous n'estimez pas avoir les compétences c'est pas un soucis, il y a un slack pour poser des questions et Google pour vous former !
+
+Il y a beaucoup de tutos et de docs de bonne qualité à propos d'Angular 2, et même en tant qu'initiateur du projet côté Front, j'ai encore beaucoup de choses à apprendre sur ce Framework alors hésitez pas à vous lancer !
+
+## Contributeurs
+
+Benjamin Audet | [GitHub](https://github.com/benjaminaudet) | [Facebook](https://www.facebook.com/benjamin.aude) | [LinkedIn](https://www.linkedin.com/in/benjamin-audet/)
