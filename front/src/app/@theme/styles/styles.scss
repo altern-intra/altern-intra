@@ -12,3 +12,7 @@
   @include nb-theme-global();
   @include nb-auth-global();
 };
+
+nb-menu .fa-calendar {
+	font-size: 1.66666rem !important;
+}
