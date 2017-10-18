@@ -9,7 +9,7 @@ Liste des features du plus extra des intra
     - Notes
     - Modules en cours
 - Mon planning
-    - Gantt (->eygle.fr)
+    - Timeline (->eygle.fr)
     - Synchro planning avec Google Agenda/ Office Agenda
     - Gestion des activités => inscription/désinscription
 - Mon dashboard
