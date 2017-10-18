@@ -1,6 +1,16 @@
 # altern-intra
 Le plus extra des intras
-# Features prévues (liste non-exhaustive, les features décrites ci-après sont celles estimées prioritaires)
+
+## Collaboration
+
+Pour participer au front, je vous invite à aller voir le dossier [front/](https://github.com/altern-intra/altern-intra/tree/master/front) du repository altern-intra.
+
+## Communication
+
+Pour communiquer nous avons un [slack](https://altern-intra.slack.com)
+
+
+## Features prévues (liste non-exhaustive, les features décrites ci-après sont celles estimées prioritaires)
 
 Liste des features du plus extra des intra
 
