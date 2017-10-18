@@ -1,9 +1,20 @@
-Altern-intra
+altern-intra
 ============
 
 L'idée est née de Quentin Maire et Benjamin Audet, nous en avions marre d'avoir un intra instable et qui nous offrait une mauvaise expérience utilisateur. 
 
 Nous avons donc décidé de "refaire" l'intra, ce n'est pas réellement une refonte, mais une alternative, une sur-couche à l'intra existant qui vise à avoir quelques secondes, voir minutes de downtime. Au delà de l'amélioration via enregistrement de contenu par refresh régulier des données, il fallait une application design, dans l'air du temps et surtout efficace.
+
+## Usage ##
+
+Pour installer les packages et les dépendances :
+
+    npm install
+
+   Pour build, watch & lancer le serveur :
+
+    ng serve
+*Si il y a un quelconque soucis avec l'installation je vous invite à rejoindre le slack pour qu'on voit ensemble ce qui va pas : [altern-intra.slack.com](https://altern-intra.slack.com)*
 
 ## Technologies ##
 
@@ -31,6 +42,11 @@ Néanmoins, collaboratif n'est pas anarchiste :
 Si vous avez envie de participer, mais que vous n'estimez pas avoir les compétences c'est pas un soucis, il y a un slack pour poser des questions et Google pour vous former !
 
 Il y a beaucoup de tutos et de docs de bonne qualité à propos d'Angular 2, et même en tant qu'initiateur du projet côté Front, j'ai encore beaucoup de choses à apprendre sur ce Framework alors hésitez pas à vous lancer !
+
+## Communication ##
+
+Je vous invite à rejoindre le slack : [altern-intra.slack.com](https://altern-intra.slack.com)
+Connectez-vous avec votre adresse `jean-michel.dupont@epitech.eu`
 
 ## Contributeurs
 

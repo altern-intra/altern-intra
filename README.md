@@ -1,4 +1,4 @@
-# alter-intra
+# altern-intra
 Le plus extra des intras
 # Features prévues (liste non-exhaustive, les features décrites ci-après sont celles estimées prioritaires)
 
