@@ -1,5 +1,5 @@
 # alter-intra
-Le plus des extra des intras
+Le plus extra des intras
 # Features prévues (liste non-exhaustive, les features décrites ci-après sont celles estimées prioritaires)
 
 Liste des features du plus extra des intra
