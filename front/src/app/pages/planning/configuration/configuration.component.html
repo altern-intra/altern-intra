@@ -1,0 +1,17 @@
+<nb-card size="small">
+  <nb-card-header>
+    <h4 id="title">{{title}}</h4>
+  </nb-card-header>
+  <nb-card-body>
+  	<div ngbDropdown>
+      <button class="btn btn-outline-primary btn-sm" type="button" ngbDropdownToggle>
+        Mode
+      </button>
+      <ul class="dropdown-menu">
+        <ng-template ngFor let-mode [ngForOf]="modes">
+          <li class="dropdown-item" value="week" (click)="changeMode(mode.value)">{{mode.name}}</li>
+        </ng-template>
+      </ul>
+    </div>
+  </nb-card-body>
+</nb-card>

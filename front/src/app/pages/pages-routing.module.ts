@@ -15,10 +15,10 @@ const routes: Routes = [{
     path: 'planning',
     component: PlanningComponent,
 
-  }, /* {
+  },  {
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
-  }, {
+  },/* {
     path: 'components',
     loadChildren: './components/components.module#ComponentsModule',
   }, {
@@ -36,7 +36,7 @@ const routes: Routes = [{
   }, {
     path: 'tables',
     loadChildren: './tables/tables.module#TablesModule',
-  }, */ {
+  }, */  {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',

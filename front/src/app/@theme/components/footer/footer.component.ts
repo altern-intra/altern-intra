@@ -9,6 +9,7 @@ import { Component } from '@angular/core';
       <a href="https://github.com/benjaminaudet" target="_blank">Benjamin Audet</a>
       </b> - 2017</span>
     <div class="socials">
+      <span id="support-us">Collaborez au projet !</span>
       <a href="https://github.com/Wats0ns/intra_native" target="_blank" class="ion ion-social-github"></a>
     </div>
   `,
