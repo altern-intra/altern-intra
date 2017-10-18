@@ -1,15 +1,15 @@
-# intra_native
-Le plus des extra des intras
+# alter-intra
+Le plus extra des intras
 # Features prévues (liste non-exhaustive, les features décrites ci-après sont celles estimées prioritaires)
 
-Cahier des charges du plus extra des intra
+Liste des features du plus extra des intra
 
 - Mon compte
     - Log time
     - Notes
     - Modules en cours
 - Mon planning
-    - Gantt (->eygle.fr)
+    - Timeline (->eygle.fr)
     - Synchro planning avec Google Agenda/ Office Agenda
     - Gestion des activités => inscription/désinscription
 - Mon dashboard

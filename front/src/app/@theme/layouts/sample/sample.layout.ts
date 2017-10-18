@@ -18,49 +18,7 @@ import 'rxjs/add/operator/delay';
 @Component({
   selector: 'ngx-sample-layout',
   styleUrls: ['./sample.layout.scss'],
-  template: `
-    <nb-layout [center]="layout.id === 'center-column'" windowMode>
-      <nb-layout-header fixed>
-        <ngx-header [position]="sidebar.id === 'left' ? 'normal': 'inverse'"></ngx-header>
-      </nb-layout-header>
-
-      <nb-sidebar class="menu-sidebar"
-                   tag="menu-sidebar"
-                   responsive
-                   [right]="sidebar.id === 'right'">
-        <nb-sidebar-header>
-          <a href="#" class="btn btn-hero-success main-btn">
-            <i class="ion ion-social-github"></i> <span>Support Us</span>
-          </a>
-        </nb-sidebar-header>
-        <ng-content select="nb-menu"></ng-content>
-      </nb-sidebar>
-
-      <nb-layout-column class="main-content">
-        <ng-content select="router-outlet"></ng-content>
-      </nb-layout-column>
-
-      <nb-layout-column left class="small" *ngIf="layout.id === 'two-column' || layout.id === 'three-column'">
-        <nb-menu [items]="subMenu"></nb-menu>
-      </nb-layout-column>
-
-      <nb-layout-column right class="small" *ngIf="layout.id === 'three-column'">
-        <nb-menu [items]="subMenu"></nb-menu>
-      </nb-layout-column>
-
-      <nb-layout-footer fixed>
-        <ngx-footer></ngx-footer>
-      </nb-layout-footer>
-
-      <nb-sidebar class="settings-sidebar"
-                   tag="settings-sidebar"
-                   state="collapsed"
-                   fixed
-                   [right]="sidebar.id !== 'right'">
-        <ngx-theme-settings></ngx-theme-settings>
-      </nb-sidebar>
-    </nb-layout>
-  `,
+  templateUrl: './sample.layout.html',
 })
 export class SampleLayoutComponent  implements OnDestroy {
 

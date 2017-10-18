@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { PagesComponent } from './pages.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { PlanningComponent } from './planning/planning.component';
 
 const routes: Routes = [{
   path: '',
@@ -11,6 +12,10 @@ const routes: Routes = [{
     path: 'dashboard',
     component: DashboardComponent,
   }, {
+    path: 'planning',
+    component: PlanningComponent,
+
+  }, /* {
     path: 'ui-features',
     loadChildren: './ui-features/ui-features.module#UiFeaturesModule',
   }, {
@@ -31,7 +36,7 @@ const routes: Routes = [{
   }, {
     path: 'tables',
     loadChildren: './tables/tables.module#TablesModule',
-  }, {
+  }, */ {
     path: '',
     redirectTo: 'dashboard',
     pathMatch: 'full',
