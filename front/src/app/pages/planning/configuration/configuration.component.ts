@@ -1,4 +1,4 @@
-import { Component} from '@angular/core';
+import { Component, EventEmitter, Output} from '@angular/core';
 
 @Component({
 	selector: 'ngx-planning-config',
@@ -7,9 +7,11 @@ import { Component} from '@angular/core';
 })
 export class ConfigurationComponent {
   title: string;
+  @Output() mode: EventEmitter<any> = new EventEmitter();
+
 
   modes = [{
-  	value: 'week',
+  	value: 'basicWeek',
   	name: 'Semaine'
   },
   {
@@ -17,7 +19,7 @@ export class ConfigurationComponent {
   	name: 'Mois'
   },
   {
-  	value: 'year',
+  	value: 'timelineYear',
   	name: 'Année'
   }];
 
@@ -26,7 +28,8 @@ export class ConfigurationComponent {
 	}
 
 	changeMode(mode) {
-		console.log(mode)
+    console.log(mode);
+		this.mode.emit(mode);
 	}
 
 }

@@ -1,4 +1,23 @@
 <div class="row">
-	<ngx-planning-config>
+	<ngx-planning-config (mode)="onChange($event)">
 	</ngx-planning-config>
+	<div class="col-md-10 col-sm-12">
+		<nb-card class="small">
+			<nb-card-header>
+				Planning
+			</nb-card-header>
+			<nb-card-body>
+				<mwl-calendar-week-view
+x				    [viewDate]="viewDate"
+				    [events]="events"
+				    [refresh]="refresh"
+				    (eventClicked)="handleEvent('Clicked', $event.event)"
+				    (eventTimesChanged)="eventTimesChanged($event)"
+				    [locale]="locale"
+				    [weekStartsOn]="weekStartsOn"
+				    [weekendDays]="weekendDays">
+				  </mwl-calendar-week-view>
+			</nb-card-body>
+		</nb-card>
+	</div>
 </div>
