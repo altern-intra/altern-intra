@@ -1,6 +1,8 @@
-<nb-card size="small">
+<a *ngIf="!burger" (click)="toggleConfig()" id="config-burger"><i class="fa fa-gear fa-2x"></i></a>
+<nb-card *ngIf="burger" size="small">
   <nb-card-header>
     <h4 id="title">{{title}}</h4>
+    <a (click)="toggleConfig()" id="close-config"><i class="fa fa-close"></i></a>
   </nb-card-header>
   <nb-card-body>
   	<div ngbDropdown>

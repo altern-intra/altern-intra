@@ -1,0 +1,26 @@
+ nb-card-header h4 {
+	display: inline;
+}
+
+#config-burger:hover {
+	color:#6b7178;
+}
+
+#config-burger {
+	margin: 0px 10px 0px -10px;
+	cursor:pointer;
+}
+
+#close-config {
+	margin: 5px;
+	display: inline;
+	top: -22px;
+  position: relative;
+  right: -16px;
+	cursor:pointer;
+	color: #a4abb3;
+}
+
+#close-config:hover {
+	color: #6b7178;
+}

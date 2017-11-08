@@ -1,5 +1,5 @@
 <div class="row">
-	<ngx-planning-config (mode)="onChange($event)">
+	<ngx-planning-config (view)="onChange($event)">
 	</ngx-planning-config>
 	<div class="col-md-10 col-sm-12">
 		<nb-card class="small">
@@ -7,7 +7,9 @@
 				Planning
 			</nb-card-header>
 			<nb-card-body>
-				<mwl-calendar-week-view
+				<div id="calendar" [ngSwitch]="view">
+					<mwl-calendar-week-view
+						*ngSwitchCase="'week'"
 x				    [viewDate]="viewDate"
 				    [events]="events"
 				    [refresh]="refresh"
@@ -17,6 +19,25 @@ x				    [viewDate]="viewDate"
 				    [weekStartsOn]="weekStartsOn"
 				    [weekendDays]="weekendDays">
 				  </mwl-calendar-week-view>
+				  <mwl-calendar-month-view
+				      *ngSwitchCase="'month'"
+				      [viewDate]="viewDate"
+				      [events]="events"
+				      [refresh]="refresh"
+				      [activeDayIsOpen]="activeDayIsOpen"
+				      (dayClicked)="dayClicked($event.day)"
+				      (eventClicked)="handleEvent('Clicked', $event.event)"
+				      (eventTimesChanged)="eventTimesChanged($event)">
+				    </mwl-calendar-month-view>
+				    <mwl-calendar-day-view
+				        *ngSwitchCase="'day'"
+				        [viewDate]="viewDate"
+				        [events]="events"
+				        [refresh]="refresh"
+				        (eventClicked)="handleEvent('Clicked', $event.event)"
+				        (eventTimesChanged)="eventTimesChanged($event)">
+				      </mwl-calendar-day-view>
+				</div>
 			</nb-card-body>
 		</nb-card>
 	</div>

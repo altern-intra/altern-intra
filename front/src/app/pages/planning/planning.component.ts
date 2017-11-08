@@ -2,11 +2,14 @@ import { ConfigurationComponent } from './configuration/configuration.component'
 
 import { CustomDateFormatter } from './custom-date-formatter.provider';
 
+import { TimerObservable } from "rxjs/observable/TimerObservable";
+
 import {
   Component,
   ChangeDetectionStrategy,
   ViewChild,
-  TemplateRef
+  TemplateRef,
+  OnInit
 } from '@angular/core';
 import {
   startOfDay,
@@ -30,16 +33,16 @@ import {
 
 const colors: any = {
   red: {
-    primary: '#ad2121',
-    secondary: '#FAE3E3'
+    primary: '#D64541',
+    secondary: '#D24D57'
   },
   blue: {
-    primary: '#1e90ff',
-    secondary: '#D1E8FF'
+    primary: '#4183D7',
+    secondary: '#22A7F0'
   },
   yellow: {
-    primary: '#e3bc08',
-    secondary: '#FDF1BA'
+    primary: '#F9BF3B',
+    secondary: '#F9BF3B'
   }
 };
 
@@ -54,55 +57,37 @@ const colors: any = {
 }]
 })
 
-export class PlanningComponent {
+export class PlanningComponent implements OnInit {
   @ViewChild('modalContent') modalContent: TemplateRef<any>;
 
   locale: string = 'fr';
 
-  view: string = 'month';
+  view: string = 'week';
 
   viewDate: Date = new Date();
 
   weekStartsOn: number = DAYS_OF_WEEK.MONDAY;
 
-  weekendDays: number[] = [DAYS_OF_WEEK.FRIDAY, DAYS_OF_WEEK.SATURDAY];
+  weekendDays: number[] = [DAYS_OF_WEEK.SATURDAY, DAYS_OF_WEEK.SUNDAY];
 
   modalData: {
     action: string;
     event: CalendarEvent;
   };
 
-  actions: CalendarEventAction[] = [
-    {
-      label: '<i class="fa fa-fw fa-pencil"></i>',
-      onClick: ({ event }: { event: CalendarEvent }): void => {
-        this.handleEvent('Edited', event);
-      }
-    },
-    {
-      label: '<i class="fa fa-fw fa-times"></i>',
-      onClick: ({ event }: { event: CalendarEvent }): void => {
-        this.events = this.events.filter(iEvent => iEvent !== event);
-        this.handleEvent('Deleted', event);
-      }
-    }
-  ];
-
   refresh: Subject<any> = new Subject();
 
   events: CalendarEvent[] = [
     {
       start: subDays(startOfDay(new Date()), 1),
-      end: addDays(new Date(), 1),
+      end: addDays(new Date(), 3),
       title: 'A 3 day event',
       color: colors.red,
-      actions: this.actions
     },
     {
       start: startOfDay(new Date()),
       title: 'An event with no end date',
       color: colors.yellow,
-      actions: this.actions
     },
     {
       start: subDays(endOfMonth(new Date()), 3),
@@ -115,7 +100,6 @@ export class PlanningComponent {
       end: new Date(),
       title: 'A draggable and resizable event',
       color: colors.yellow,
-      actions: this.actions,
       resizable: {
         beforeStart: true,
         afterEnd: true
@@ -127,6 +111,9 @@ export class PlanningComponent {
   activeDayIsOpen: boolean = true;
 
   constructor(private modal: NgbModal) {}
+
+  ngOnInit() {
+  }
 
   dayClicked({ date, events }: { date: Date; events: CalendarEvent[] }): void {
     if (isSameMonth(date, this.viewDate)) {
@@ -171,5 +158,9 @@ export class PlanningComponent {
       }
     });
     this.refresh.next();
+  }
+
+  onChange(event) {
+    this.view = event;
   }
 }
