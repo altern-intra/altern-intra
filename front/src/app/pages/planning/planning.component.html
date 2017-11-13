@@ -10,11 +10,9 @@
 				<div id="calendar" [ngSwitch]="view">
 					<mwl-calendar-week-view
 						*ngSwitchCase="'week'"
-x				    [viewDate]="viewDate"
+				    [viewDate]="viewDate"
 				    [events]="events"
 				    [refresh]="refresh"
-				    (eventClicked)="handleEvent('Clicked', $event.event)"
-				    (eventTimesChanged)="eventTimesChanged($event)"
 				    [locale]="locale"
 				    [weekStartsOn]="weekStartsOn"
 				    [weekendDays]="weekendDays">
@@ -25,17 +23,13 @@ x				    [viewDate]="viewDate"
 				      [events]="events"
 				      [refresh]="refresh"
 				      [activeDayIsOpen]="activeDayIsOpen"
-				      (dayClicked)="dayClicked($event.day)"
-				      (eventClicked)="handleEvent('Clicked', $event.event)"
-				      (eventTimesChanged)="eventTimesChanged($event)">
+				      >
 				    </mwl-calendar-month-view>
 				    <mwl-calendar-day-view
 				        *ngSwitchCase="'day'"
 				        [viewDate]="viewDate"
 				        [events]="events"
-				        [refresh]="refresh"
-				        (eventClicked)="handleEvent('Clicked', $event.event)"
-				        (eventTimesChanged)="eventTimesChanged($event)">
+				        [refresh]="refresh">
 				      </mwl-calendar-day-view>
 				      <google-chart 
 				      	*ngSwitchCase="'year'"
