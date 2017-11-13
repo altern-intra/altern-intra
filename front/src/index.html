@@ -21,4 +21,11 @@
     <div class="blob blob-5"></div>
   </div>
 </body>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script>  
+    // !important: You want to give this variable(var googleLoaded = false;). This is used to run multiple chart in your jade.
+    var googleLoaded = false;
+    // !important: Define which chart packages to preload.Because this package uses ChartWrappers you can use any chart type that Google supports, but if it // isn't loaded it will load it on demand. 
+    var googleChartsPackagesToLoad = ['timeline'];
+</script>
 </html>

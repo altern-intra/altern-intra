@@ -19,7 +19,7 @@ import {trigger, state, style, transition, animate} from '@angular/animations';
 })
 export class ConfigurationComponent {
   menuState: string = 'out';
-  burger: boolean = false;
+  burger: boolean = true;
   title: string;
   @Output() view: EventEmitter<any> = new EventEmitter();
 

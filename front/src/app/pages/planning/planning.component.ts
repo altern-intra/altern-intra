@@ -77,6 +77,38 @@ export class PlanningComponent implements OnInit {
 
   refresh: Subject<any> = new Subject();
 
+  timelineChartData =  {
+    chartType: 'Timeline',
+    dataTable: [
+    [ '\0'                                 ,  'Maintenant'                            ,  new Date(), new Date() ],
+    [ 'B4 - Système Unix - Mémoire'        ,  'Malloc'                                ,  new Date(2017, 0, 23), new Date(2017, 1, 12) ],
+    [ 'B4 - C++'                           ,  'NanoTekSpice'                          ,  new Date(2017, 0, 23), new Date(2017, 2, 5)  ],
+    [ 'B4 - Écrits professionnels'         ,  'Mission délicate: recadrer un collègue',  new Date(2017, 1, 6), new Date(2017, 1, 19) ],
+    [ 'B4 - Prog Elem Appliquee / Projet'  ,  'Trade'                                 ,  new Date(2017, 0, 30), new Date(2017, 5, 11) ],
+    [ 'B4 - Écrits professionnels'         ,  'Diaporama pour décrocher 1M$'          ,  new Date(2017, 1, 20), new Date(2017, 2, 5)  ],
+    [ 'B4 - Sécurité Web'                  ,  'SHODAN Call For Paper'                 ,  new Date(2017, 1, 12), new Date(2017, 4, 3)  ],
+    [ 'B4 - Système Unix - Mémoire'        ,  'nm/objdump'                            ,  new Date(2017, 1, 13), new Date(2017, 1, 26) ],
+    [ 'B4 - Sécurité Web'                  ,  'SHODAN'                                ,  new Date(2017, 1, 13), new Date(2017, 2, 12) ],
+    [ 'B4 - Système Unix - Concurrence'    ,  'Philosophes'                           ,  new Date(2017, 2, 6) , new Date(2017, 2, 19) ],
+    [ 'B4 - Écrits professionnels'         ,  'Rédiger un bilan d\'expérience'        ,  new Date(2017, 2, 6) , new Date(2017, 2, 26) ],
+    [ 'B4 - C++'                           ,  'Arcade'                                ,  new Date(2017, 2, 6) , new Date(2017, 3, 9)  ],
+    [ 'B4 - Système Unix - Concurrence'    ,  'LemIPC'                                ,  new Date(2017, 2, 20), new Date(2017, 3, 2)  ],
+    [ 'B4 - Système Unix - Instrumentation',  'strace'                                ,  new Date(2017, 3, 3) , new Date(2017, 3, 16) ],
+    [ 'B4 - C++ II'                        ,  'The Plazza'                            ,  new Date(2017, 3, 10), new Date(2017, 3, 30) ],
+    [ 'B4 - Système Unix - Instrumentation',  'ftrace'                                ,  new Date(2017, 3, 17), new Date(2017, 4, 7)  ],
+    [ 'B4 - C++ II'                        ,  'Indie Studio'                          ,  new Date(2017, 4, 1) , new Date(2017, 5, 11) ],
+    [ 'B4 - Systeme Unix - Réseau'         ,  'MyFTP'                                 ,  new Date(2017, 4, 8) , new Date(2017, 4, 21) ],
+    [ 'B4 - Administration Système'        ,  'Projet My NAS'                         ,  new Date(2017, 4, 15), new Date(2017, 5, 18) ],
+    [ 'B4 - Systeme Unix - Réseau'         ,  'MyIRC'                                 ,  new Date(2017, 4, 22), new Date(2017, 5, 11) ],
+    [ 'B4 - Systeme Unix - Réseau'         ,  'Zappy'                                 ,  new Date(2017, 4, 29), new Date(2017, 6, 2)  ],
+  ]  ,
+    options: {
+      'title': 'Planning annuel',
+      'height': 700
+    },
+  };
+
+
   events: CalendarEvent[] = [
     {
       start: subDays(startOfDay(new Date()), 1),
@@ -109,8 +141,14 @@ export class PlanningComponent implements OnInit {
   ];
 
   activeDayIsOpen: boolean = true;
+  newHeight: number;
 
-  constructor(private modal: NgbModal) {}
+  constructor(private modal: NgbModal) {
+    this.newHeight = this.timelineChartData.dataTable.length * 25;
+    console.log(this.newHeight)
+    this.timelineChartData.options.height = this.newHeight;
+
+  }
 
   ngOnInit() {
   }

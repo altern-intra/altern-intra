@@ -37,6 +37,10 @@ x				    [viewDate]="viewDate"
 				        (eventClicked)="handleEvent('Clicked', $event.event)"
 				        (eventTimesChanged)="eventTimesChanged($event)">
 				      </mwl-calendar-day-view>
+				      <google-chart 
+				      	*ngSwitchCase="'year'"
+				      	[data]="timelineChartData">
+				      </google-chart>
 				</div>
 			</nb-card-body>
 		</nb-card>
