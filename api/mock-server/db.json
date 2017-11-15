@@ -1,0 +1,115 @@
+{
+  "modules": [
+    {
+      "id": 1,
+      "codeModule": "PSU-TEST-1",
+      "description": "learn to code, noobs",
+      "startDate": "2017-10-30",
+      "endDate": "2017-12-10",
+      "endRegister": "2017-11-12",
+      "overwriteInstances": {
+        "LYN-0-2": {
+          "description": "learn to code in Lyon, noobs"
+        }
+      },
+      "registered": [
+        {
+            "course_code": "bachelor/classic",
+            "credits": 0,
+            "cycle": "bachelor",
+            "date_ins": "2017-10-30 12:44:39",
+            "flags": [],
+            "grade": null,
+            "location": null,
+            "login": "root@epitech.eu",
+            "picture": "https://cdn.local.epitech.eu/userprofil/root.bmp",
+            "promo": 2022,
+            "semester": "B1",
+            "title": "ROOT TOOR"
+        },
+        {
+            "course_code": "bachelor/classic",
+            "credits": 0,
+            "cycle": "bachelor",
+            "date_ins": "2017-10-30 12:44:39",
+            "flags": [],
+            "grade": null,
+            "location": null,
+            "login": "root2@epitech.eu",
+            "picture": "https://cdn.local.epitech.eu/userprofil/root2.bmp",
+            "promo": 2022,
+            "semester": "B1",
+            "title": "ROOT TOOR 2"
+        }
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": 1,
+      "description": "Yala Yala some code",
+      "moduleId": 1,
+      "begin": "2017-10-30 09:00:00",
+      "end": "2017-11-12 23:42:00",
+      "instance_location": "FR/MAR",
+      "title": "Presentation of the New English Unit"
+    }
+  ],
+  "events": [
+    {
+      "id": 1,
+      "activityId": 1,
+      "begin": "2017-10-30 09:00:00",
+      "end": "2017-11-12 12:42:00",
+      "code": "event-273491",
+      "location": "FR/MAR/main/BAT1-SciFi",
+      "nb_inscrits": "89",
+      "seats": "90",
+      "title": "C\u00e9cile",
+      "instance_location": "FR/MAR",
+      "registered": [
+        {
+            "course_code": "bachelor/classic",
+            "credits": 0,
+            "cycle": "bachelor",
+            "date_ins": "2017-10-30 12:44:39",
+            "flags": [],
+            "grade": null,
+            "location": null,
+            "login": "root@epitech.eu",
+            "picture": "https://cdn.local.epitech.eu/userprofil/root.bmp",
+            "promo": 2022,
+            "semester": "B1",
+            "title": "ROOT TOOR"
+        },
+        {
+            "course_code": "bachelor/classic",
+            "credits": 0,
+            "cycle": "bachelor",
+            "date_ins": "2017-10-30 12:44:39",
+            "flags": [],
+            "grade": null,
+            "location": null,
+            "login": "root2@epitech.eu",
+            "picture": "https://cdn.local.epitech.eu/userprofil/root2.bmp",
+            "promo": 2022,
+            "semester": "B1",
+            "title": "ROOT TOOR 2"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "activityId": 1,
+      "begin": "2017-10-30 14:00:00",
+      "end": "2017-11-12 16:42:00",
+      "code": "event-273491",
+      "location": "FR/MAR/main/BAT1-SciFi",
+      "nb_inscrits": "89",
+      "seats": "90",
+      "title": "C\u00e9cile",
+      "instance_location": "FR/MAR",
+      "registered": []
+    }
+  ]
+}
