@@ -1,0 +1,26 @@
+{
+  "name": "authentification",
+  "version": "1.0.0",
+  "description": "Authentification and authorization for altern-intra API",
+  "main": "index.js",
+  "scripts": {
+    "prod": "babel-node ./src/index.js --presets es2015",
+    "dev": "nodemon --exec babel-node ./src/index.js --presets es2015",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stanislas CUENAT",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "dotenv": "^4.0.0",
+    "express": "^4.16.2",
+    "jsonwebtoken": "^8.1.0",
+    "mongoose": "^4.12.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "nodemon": "^1.12.1"
+  }
+}
