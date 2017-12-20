@@ -1,12 +1,12 @@
 const express = require('express');
-const Modules = require('../models/modules');
+const { ModulesModel } = require('intra-models');
 
 /* GET modules listing. */
 
 class ModulesRouter {
   constructor(db) {
     this.db = db;
-    this.modulesModel = new Modules(this.db);
+    this.modulesModel = new ModulesModel(this.db);
     this.modulesModelSchema = this.modulesModel.getSchema();
     this.router = express.Router();
     this.router

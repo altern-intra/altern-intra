@@ -9,6 +9,7 @@ const winston = require('./config/winston');
 const index = require('./routes/index');
 const users = require('./routes/users');
 const Modules = require('./routes/modules');
+const Planning = require('./routes/planning');
 
 const app = express();
 
@@ -46,10 +47,12 @@ app.use(cookieParser());
 Promise.all(initPromises)
   .then((res) => {
     const [mongo] = res;
-    const [ModulesRoutes] = [new Modules(mongo)];
+    const [ModulesRoutes, PlanningRoutes] = [new Modules(mongo), new Planning(mongo)];
+
     app.use('/', index);
     app.use('/users', users);
     app.use('/modules', ModulesRoutes.getRouter());
+    app.use('/planning', PlanningRoutes.getRouter());
     app.use(notFoundHandler);
     app.use(errorHandler);
     winston.info('Starting successful');

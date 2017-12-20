@@ -12,17 +12,19 @@
     "debug": "~2.6.9",
     "dotenv": "^4.0.0",
     "express": "~4.15.5",
+    "intra-models": "git+https://github.com/altern-intra/intra-models.git",
     "jade": "~1.11.0",
-    "mongoose": "^4.13.0",
+    "moment": "^2.19.4",
+    "mongoose": "^4.13.7",
     "morgan": "~1.9.0",
     "serve-favicon": "~2.4.5",
     "winston": "^2.4.0"
   },
   "devDependencies": {
-    "eslint": "^4.10.0",
+    "eslint": "^4.13.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
-    "eslint-plugin-react": "^7.4.0"
+    "eslint-plugin-react": "^7.5.1"
   }
 }
