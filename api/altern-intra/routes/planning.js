@@ -14,94 +14,51 @@ class PlanningRouter {
     this.router = express.Router();
     this.router
       .get('/:instance', (req, res) => {
-        const instance = req.params.instance;
+        const { instance } = req.params;
 
-        let {startDate, endDate} = req.params;
+        let { startDate, endDate } = req.params;
         if (startDate === undefined) {
           startDate = moment();
         }
         if (endDate === undefined) {
-          endDate = moment().add(7, "days");
+          endDate = moment().add(7, 'days');
         }
         const matcher = {
           $match: {
-                  instances: [instance],
-                  begin: {
-                    $lte: endDate.format('YYYY-MM-DD')
-                  },
-                  end: {
-                    $gte: startDate.format('YYYY-MM-DD')
-                  }
-          }};
+            instances: [instance],
+            begin: {
+              $lte: endDate.format('YYYY-MM-DD'),
+            },
+            end: {
+              $gte: startDate.format('YYYY-MM-DD'),
+            },
+          },
+        };
         this.modulesModelSchema.aggregate([matcher,
-        {
-          $lookup: {
-            from: "activities",
-            localField: "_id",
-            foreignField: "moduleId",
-            as: "activities"
-          }}, {
+          {
+            $lookup: {
+              from: 'activities',
+              localField: '_id',
+              foreignField: 'moduleId',
+              as: 'activities',
+            },
+          }, {
             $unwind: {
-              path: "$activities",
-              preserveNullAndEmptyArrays: true
-            }
-          },{
-          $lookup: {
-            from: "events",
-            localField: "activities._id",
-            foreignField: "activityId",
-            as: "activities.eventsFounds"
-          }
-        }]).then((result) => {
-          console.log(result)
-          res.send(result)
-        });
+              path: '$activities',
+              preserveNullAndEmptyArrays: true,
+            },
+          }, {
+            $lookup: {
+              from: 'events',
+              localField: 'activities._id',
+              foreignField: 'activityId',
+              as: 'activities.eventsFounds',
+            },
+          }])
+          .then((result) => {
+            res.send(result);
+          });
       });
-        // Promise.all([
-        //     this.modulesModelSchema
-        //     .find({
-        //       instances: [instance],
-        //       begin: {
-        //         $lte: endDate.format('YYYY-MM-DD')
-        //       },
-        //       end: {
-        //         $gte: startDate.format('YYYY-MM-DD')
-        //       }
-        //   }).lean(), this.activityModelSchema
-        //     .find({
-        //       instance_location: instance,
-        //       begin: {
-        //         $lte: endDate.format('YYYY-MM-DD')
-        //       },
-        //       end: {
-        //         $gte: startDate.format('YYYY-MM-DD')
-        //       }
-        //   }).lean(), this.eventModelSchema
-        //     .find({
-        //       codeInstance: instance,
-        //       begin: {
-        //         $lte: endDate.format('YYYY-MM-DD')
-        //       },
-        //       end: {
-        //         $gte: startDate.format('YYYY-MM-DD')
-        //       }
-        //     }).lean()])
-        //   .then((result) => {
-        //     const [ modules, activities, events ] = result;
-        //     const tmp = modules.map((module, index) => {
-        //       module.activitiesFound = activities.filter(activity => activity.moduleId && activity.moduleId.toString() === module._id.toString())
-        //       return module
-        //     });
-        //
-        //     res.json({status: true,
-        //       instance,
-        //       tmp
-        //     });
-        //   })
-        //   .catch((err) => {
-        //     console.log(err)
-        //     res.json({status: false, msg: err});
-        //   })
   }
   getRouter() {
     return this.router;
