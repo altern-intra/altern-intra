@@ -11,12 +11,27 @@ class ModulesRouter {
     this.router = express.Router();
     this.router
       .get('/', (req, res) => {
-        this.modulesModel
-          .getModules({
-            instance: 'LYN-0-1',
-          })
+        const { instance } = req.query;
+
+        const matcher = {};
+        if (instance) {
+          matcher.instances = [instance];
+        }
+        this.modulesModelSchema
+          .find(matcher)
           .then((results) => {
             res.json({ status: true, data: results });
+          })
+          .catch((err) => {
+            throw err;
+          });
+      })
+      .get('/:id', (req, res) => {
+        const { id } = req.params;
+        this.modulesModelSchema
+          .findById(id)
+          .then((module) => {
+            res.json({ status: true, data: module });
           })
           .catch((err) => {
             throw err;
